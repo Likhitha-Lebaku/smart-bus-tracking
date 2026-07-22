@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Bus</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f7fc;
+            text-align:center;
+        }
+
+        .container{
+            width:400px;
+            margin:40px auto;
+            background:white;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        h2{
+            color:#007BFF;
+        }
+
+        input{
+            width:90%;
+            padding:10px;
+            margin:10px;
+        }
+
+        button{
+            background:#007BFF;
+            color:white;
+            padding:10px 20px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Add New Bus</h2>
+
+<form action="/saveBus" method="post">
+
+<input type="text" name="busNumber" placeholder="Bus Number" required>
+
+<input type="text" name="route" placeholder="Route" required>
+
+<input type="text" name="currentLocation" placeholder="Current Location" required>
+
+<input type="text" name="destination" placeholder="Destination" required>
+
+<input type="text" name="status" placeholder="Status" required>
+<input type="text" name="driverName" placeholder="Driver Name" required>
+
+<button type="submit">Save Bus</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
